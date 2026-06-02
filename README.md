@@ -44,7 +44,7 @@ sudo bash linux/install.sh
 **Aktivierung – permanent (X11 und Wayland):**
 ```bash
 sudo localectl set-x11-keymap iast_ch      # Swiss German, PC-Tastatur
-sudo localectl set-x11-keymap iast_ch_mac  # Swiss German, Apple-Tastatur
+sudo localectl set-x11-keymap iast_ch_mac  # Swiss German, Apple-Tastatur (rechte ⌥ = AltGr)
 sudo localectl set-x11-keymap iast_de      # German, PC-Tastatur
 sudo localectl set-x11-keymap iast_de_mac  # German, Apple-Tastatur
 ```
@@ -56,7 +56,8 @@ setxkbmap iast_ch
 
 Oder: GNOME Einstellungen → Tastatur → Eingabequellen → **+** → „IAST"
 
-> `localectl` funktioniert auf X11 und Wayland. `setxkbmap` funktioniert nur unter X11.
+> `localectl` funktioniert auf X11 und Wayland. `setxkbmap` funktioniert nur unter X11.  
+> Mac-Tastaturen (`_mac`-Varianten): nur die **rechte ⌥-Taste** löst IAST-Zeichen aus. Die linke ⌥-Taste bleibt normales Alt (für App-Shortcuts).
 
 ### Windows
 
@@ -80,8 +81,8 @@ linux/
   symbols/
     iast_ch               XKB-Symboldatei, Basis: ch(de)
     iast_de               XKB-Symboldatei, Basis: de(basic)
-    iast_ch_mac           Wie iast_ch + ⌥ rechts = AltGr
-    iast_de_mac           Wie iast_de + ⌥ rechts = AltGr
+    iast_ch_mac           Wie iast_ch + rechte ⌥-Taste = AltGr (linke ⌥ = Alt, unverändert)
+    iast_de_mac           Wie iast_de + rechte ⌥-Taste = AltGr (linke ⌥ = Alt, unverändert)
 
 win/
   IAST_CH.klc             MSKLC-Quelldatei Swiss German
