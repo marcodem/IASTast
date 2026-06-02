@@ -20,7 +20,7 @@ Die geopferten Zeichen unterscheiden sich leicht zwischen CH- und DE-Layout.
 | i | ī | Ī | ¡ | ⁄ |
 | u | ū | Ū | ° | ¨ (dead) |
 | r | ṛ | Ṛ | ® | ® |
-| l / v¹ | ḷ | Ḷ | ¬ | √ |
+| l / f¹ | ḷ | Ḷ | ¬ | ƒ |
 | t | ṭ | Ṭ | † | † |
 | d | ḍ | Ḍ | ∂ | ∂ |
 | n | ṇ | Ṇ | ~ (dead) | ~ (dead) |
@@ -31,7 +31,7 @@ Die geopferten Zeichen unterscheiden sich leicht zwischen CH- und DE-Layout.
 | q / g² | ṅ | Ṅ | œ | © |
 | j | ñ | Ñ | º | º |
 
-¹ CH: ⌥l → ḷ — DE (macOS): ⌥v → ḷ (⌥l = @ auf DE, bleibt erhalten)  
+¹ CH: ⌥l → ḷ — DE: ⌥f → ḷ (⌥l = @ auf DE, bleibt erhalten; ⌥v = √ wiederhergestellt)  
 ² CH: ⌥q → ṅ — DE: ⌥g → ṅ  
 Erhalten auf allen Layouts: **@ , € , [ ] { } | \** und alle Umlaute
 
