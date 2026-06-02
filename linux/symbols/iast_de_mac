@@ -4,7 +4,7 @@
 // Tasten wie auf macOS: rechte ⌥ = IAST, linke ⌥ = Alt (normal)
 //
 //   ⌥a → ā  ⌥i → ī  ⌥u → ū
-//   ⌥r → ṛ  ⌥l → ḷ  ⌥t → ṭ  ⌥d → ḍ
+//   ⌥r → ṛ  ⌥f → ḷ  ⌥t → ṭ  ⌥d → ḍ
 //   ⌥n → ṇ  ⌥s → ṣ  ⌥x → ś  ⌥m → ṃ
 //   ⌥h → ḥ  ⌥g → ṅ  ⌥j → ñ
 //
@@ -28,7 +28,7 @@ xkb_symbols "iast_de_mac" {
     key <AC03> { type[Group1] = "FOUR_LEVEL_ALPHABETIC", symbols[Group1] = [ d,      D,      U1E0D,  U1E0C  ] }; // ḍ Ḍ
     key <AB06> { type[Group1] = "FOUR_LEVEL_ALPHABETIC", symbols[Group1] = [ n,      N,      U1E47,  U1E46  ] }; // ṇ Ṇ
     key <AD04> { type[Group1] = "FOUR_LEVEL_ALPHABETIC", symbols[Group1] = [ r,      R,      U1E5B,  U1E5A  ] }; // ṛ Ṛ
-    key <AC09> { type[Group1] = "FOUR_LEVEL_ALPHABETIC", symbols[Group1] = [ l,      L,      U1E37,  U1E36  ] }; // ḷ Ḷ
+    key <AC04> { type[Group1] = "FOUR_LEVEL_ALPHABETIC", symbols[Group1] = [ f,      F,      U1E37,  U1E36  ] }; // ḷ Ḷ
 
     // Sibilanten
     key <AC02> { type[Group1] = "FOUR_LEVEL_ALPHABETIC", symbols[Group1] = [ s,      S,      U1E63,  U1E62  ] }; // ṣ Ṣ

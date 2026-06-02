@@ -3,7 +3,7 @@
 //
 // AltGr-Belegung (IAST):
 //   a → ā  A  i → ī  I  u → ū  U
-//   r → ṛ  R  l → ḷ  L  t → ṭ  T  d → ḍ  D
+//   r → ṛ  R  f → ḷ  F  t → ṭ  T  d → ḍ  D
 //   n → ṇ  N  s → ṣ  S  x → ś  S  m → ṃ  M
 //   h → ḥ  H  g → ṅ  G  j → ñ  J
 //
@@ -25,7 +25,7 @@ xkb_symbols "iast_de" {
     key <AC03> { type[Group1] = "FOUR_LEVEL_ALPHABETIC", symbols[Group1] = [ d,      D,      U1E0D,  U1E0C  ] }; // ḍ Ḍ
     key <AB06> { type[Group1] = "FOUR_LEVEL_ALPHABETIC", symbols[Group1] = [ n,      N,      U1E47,  U1E46  ] }; // ṇ Ṇ
     key <AD04> { type[Group1] = "FOUR_LEVEL_ALPHABETIC", symbols[Group1] = [ r,      R,      U1E5B,  U1E5A  ] }; // ṛ Ṛ
-    key <AC09> { type[Group1] = "FOUR_LEVEL_ALPHABETIC", symbols[Group1] = [ l,      L,      U1E37,  U1E36  ] }; // ḷ Ḷ
+    key <AC04> { type[Group1] = "FOUR_LEVEL_ALPHABETIC", symbols[Group1] = [ f,      F,      U1E37,  U1E36  ] }; // ḷ Ḷ
 
     // Sibilanten
     key <AC02> { type[Group1] = "FOUR_LEVEL_ALPHABETIC", symbols[Group1] = [ s,      S,      U1E63,  U1E62  ] }; // ṣ Ṣ
