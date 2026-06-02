@@ -2,20 +2,38 @@
 
 IAST-konforme Tastaturlayouts (International Alphabet of Sanskrit Transliteration) für macOS, Windows und Linux. IAST-Zeichen sind via **Option/AltGr-Taste** erreichbar und ergänzen bestehende Deutsche und Schweizer Layouts ohne deren wichtige Sonderbelegungen (@ , €) zu beeinträchtigen.
 
+## Teststatus
+
+| Plattform | Getestet auf |
+|-----------|-------------|
+| macOS | macOS 15 Sequoia |
+| Linux | Debian 13, Fedora 44 (X11 und Wayland) |
+| Windows | AutoHotkey-Variante (`.klc` ungetestet) |
+
 ## IAST-Belegung
 
-| Taste | ⌥ / AltGr | ⇧⌥ / Shift+AltGr | Taste | ⌥ / AltGr | ⇧⌥ / Shift+AltGr |
-|-------|-----------|------------------|-------|-----------|------------------|
-| a | ā | Ā | s | ṣ | Ṣ |
-| i | ī | Ī | d | ḍ | Ḍ |
-| u | ū | Ū | n | ṇ | Ṇ |
-| r | ṛ | Ṛ | h | ḥ | Ḥ |
-| l¹ | ḷ | Ḷ | m | ṃ | Ṃ |
-| t | ṭ | Ṭ | g² | ṅ | Ṅ |
-| x | ś | Ś | j | ñ | Ñ |
+Die geopferten Zeichen unterscheiden sich leicht zwischen CH- und DE-Layout.
 
-¹ DE (macOS): ⌥v → ḷ, weil ⌥l = @  
-² CH: ⌥q → ṅ
+| Taste | ⌥ / AltGr | ⇧⌥ | Ersetzt (CH) | Ersetzt (DE) |
+|-------|-----------|-----|-------------|-------------|
+| a | ā | Ā | å | å |
+| i | ī | Ī | ¡ | ⁄ |
+| u | ū | Ū | ° | ¨ (dead) |
+| r | ṛ | Ṛ | ® | ® |
+| l / v¹ | ḷ | Ḷ | ¬ | √ |
+| t | ṭ | Ṭ | † | † |
+| d | ḍ | Ḍ | ∂ | ∂ |
+| n | ṇ | Ṇ | ~ (dead) | ~ (dead) |
+| s | ṣ | Ṣ | ß | ‚ |
+| x | ś | Ś | ≈ | ≈ |
+| m | ṃ | Ṃ | µ | µ |
+| h | ḥ | Ḥ | ª | ª |
+| q / g² | ṅ | Ṅ | œ | © |
+| j | ñ | Ñ | º | º |
+
+¹ CH: ⌥l → ḷ — DE (macOS): ⌥v → ḷ (⌥l = @ auf DE, bleibt erhalten)  
+² CH: ⌥q → ṅ — DE: ⌥g → ṅ  
+Erhalten auf allen Layouts: **@ , € , [ ] { } | \** und alle Umlaute
 
 ## Layouts
 
@@ -64,7 +82,7 @@ Oder: GNOME Einstellungen → Tastatur → Eingabequellen → **+** → „IAST"
 **Option A – AutoHotkey (sofort, ohne Compilation):**  
 [AutoHotkey v2](https://www.autohotkey.com) installieren, dann `win/IAST_AHK.ahk` starten.
 
-**Option B – nativer Treiber:**  
+**Option B – nativer Treiber (ungetestet):**  
 `win/IAST_DE.klc` oder `win/IAST_CH.klc` mit [Microsoft Keyboard Layout Creator](https://www.microsoft.com/en-us/download/details.aspx?id=102134) kompilieren und Setup ausführen.
 
 ## Projektstruktur
