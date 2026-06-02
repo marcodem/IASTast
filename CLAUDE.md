@@ -8,7 +8,7 @@ IAST-konforme Tastaturlayouts (International Alphabet of Sanskrit Transliteratio
 
 **Unterstützte Layouts:**
 - `IAST CH` — Swiss German Basis (`de(ch)`)
-- `IAST DE` — Deutsches Basis (`de(basic)`) — Unterschied: ḷ liegt auf ⌥v statt ⌥l, weil ⌥l = @ auf DE
+- `IAST DE` — Deutsches Basis (`de(basic)`) — Unterschied: ḷ liegt auf ⌥f statt ⌥l, weil ⌥l = @ auf DE
 
 ## Projektstruktur
 

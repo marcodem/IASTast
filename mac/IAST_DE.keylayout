@@ -22,7 +22,7 @@
       j → ñ   Shift+Option+j → Ñ
 
     Erhalten: @ (Opt+l), € (Opt+e), alle anderen Tasten unverändert.
-    Abweichung von CH_de: ḷ/Ḷ auf v statt l (wegen @ auf l).
+    Abweichung von CH_de: ḷ/Ḷ auf f statt l (wegen @ auf l).
 -->
 <keyboard group="126" id="-26001" name="IAST DE" maxout="1">
 	<layouts>
