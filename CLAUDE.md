@@ -14,11 +14,13 @@ IAST-konforme Tastaturlayouts (International Alphabet of Sanskrit Transliteratio
 
 ```
 mac/
-  IAST_CH_Installer.dmg   ← Auslieferung (keylayout + Anleitung.txt)
-  IAST_DE_Installer.dmg   ← Auslieferung
+  IAST_CH_Installer.dmg   ← Auslieferung Option B (keylayout + Anleitung.txt, funktioniert über jeden Übertragungsweg)
+  IAST_DE_Installer.dmg   ← Auslieferung Option B
+  IAST_CH_Installer.app   ← Auslieferung Option A (automatischer Installer, nur lokal/AirDrop/USB/SFTP)
+  IAST_DE_Installer.app   ← Auslieferung Option A
   IAST_CH.keylayout       ← Quelle, Swiss German IAST
   IAST_DE.keylayout       ← Quelle, German IAST
-  build_apps.sh           ← Baut .app-Installer (nur für Lokal-Distribution)
+  build_apps.sh           ← Baut .app-Installer aus Quellen neu
   src/                    ← Swift/AppKit Installer-App (Quellcode)
 
 linux/
@@ -41,20 +43,27 @@ win/
 ## macOS – Build
 
 ```bash
-# Alle vier Installertypen aus Quellen neu bauen:
+# .app-Installer neu bauen (nach Änderungen an keylayout oder src/):
 cd mac && bash build_apps.sh
 
-# Nur DMGs neu verpacken (nach Änderungen an Anleitung/keylayout):
-# Siehe build_and_package()-Funktion in build_apps.sh
+# DMGs neu verpacken (nach Änderungen an keylayout oder Anleitung.txt):
+# hdiutil create -volname "IAST DE" -srcfolder /tmp/iast_de_new -ov -format UDZO mac/IAST_DE_Installer.dmg
 ```
 
 **Voraussetzungen:** Xcode Command Line Tools, PyObjC (`pip3 install pyobjc-framework-Cocoa --break-system-packages`)
 
 ## macOS – Verteilung
 
-**Wichtig:** Die `.app`-Installer funktionieren nur lokal oder via SFTP/AirDrop/USB. Via WhatsApp, E-Mail oder Browser-Download blockiert macOS 15 Sequoia unsigned Apps vollständig — der „Dennoch öffnen"-Button in Privacy & Security wurde in Sequoia entfernt.
+Zwei Auslieferungsformate in den GitHub Releases:
 
-**Lösung:** Die DMGs in `mac/` enthalten ausschliesslich die `.keylayout`-Datei + `Anleitung.txt`. `.keylayout` ist reines XML, kein Executable — Gatekeeper ignoriert es. Funktioniert über jeden Übertragungsweg.
+**Option A – `.app`-Installer** (`IAST_CH_Installer.zip` / `IAST_DE_Installer.zip`):
+- Installiert das keylayout automatisch per Doppelklick
+- Nur via AirDrop, USB oder SFTP nutzbar — macOS 15 Sequoia blockiert unsignierte Apps aus dem Internet vollständig (kein „Dennoch öffnen"-Button mehr)
+
+**Option B – DMG** (`IAST_CH_Installer.dmg` / `IAST_DE_Installer.dmg`):
+- Enthält ausschliesslich `.keylayout` + `Anleitung.txt`
+- `.keylayout` ist reines XML, kein Executable — Gatekeeper ignoriert es
+- Funktioniert über jeden Übertragungsweg (Browser, E-Mail, WhatsApp etc.)
 
 Für vollständig signierte/notarisierte Apps wäre ein Apple Developer Account ($99/Jahr) nötig.
 
