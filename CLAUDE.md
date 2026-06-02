@@ -104,9 +104,9 @@ sudo dnf reinstall -y xkeyboard-config
 | i | ī | Ī | d | ḍ | Ḍ |
 | u | ū | Ū | n | ṇ | Ṇ |
 | r | ṛ | Ṛ | h | ḥ | Ḥ |
-| l/v¹ | ḷ | Ḷ | m | ṃ | Ṃ |
+| l/f¹ | ḷ | Ḷ | m | ṃ | Ṃ |
 | t | ṭ | Ṭ | g/q² | ṅ | Ṅ |
 | x | ś | Ś | j | ñ | Ñ |
 
-¹ CH: ⌥l → ḷ — DE (macOS): ⌥v → ḷ (⌥l = @)  
+¹ CH: ⌥l → ḷ — DE: ⌥f → ḷ (⌥l = @; ⌥v = √ wiederhergestellt)  
 ² CH: ⌥q → ṅ — DE (Linux/Win): ⌥g → ṅ
