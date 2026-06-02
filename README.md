@@ -46,7 +46,18 @@ Erhalten auf allen Layouts: **@ , € , [ ] { } | \** und alle Umlaute
 
 ### macOS
 
-1. Entsprechendes DMG aus [Releases](https://github.com/marcodem/IASTast/releases) herunterladen
+Zwei Varianten aus [Releases](https://github.com/marcodem/IASTast/releases):
+
+**Option A – .app-Installer (einfacher):**
+1. `IAST_CH_Installer.zip` oder `IAST_DE_Installer.zip` herunterladen und entpacken
+2. `IAST_CH_Installer.app` (oder `DE`) doppelklicken → installiert automatisch
+3. Ab- und wieder anmelden
+4. Systemeinstellungen → Tastatur → Eingabequellen → **+** → „IAST" suchen
+
+> **Hinweis:** Die `.app`-Installer sind unsigniert. macOS blockiert sie beim Download via Browser/Mail — per AirDrop, USB oder SFTP funktionieren sie. Alternativ Option B verwenden.
+
+**Option B – manuell via DMG:**
+1. `IAST_CH_Installer.dmg` oder `IAST_DE_Installer.dmg` herunterladen
 2. DMG öffnen
 3. `IAST_CH.keylayout` (oder `IAST_DE.keylayout`) nach `~/Library/Keyboard Layouts/` kopieren  
    *(Finder: ⌘⇧G → `~/Library/Keyboard Layouts`)*
