@@ -39,14 +39,24 @@ IAST-konforme Tastaturlayouts (International Alphabet of Sanskrit Transliteratio
 
 ```bash
 sudo bash linux/install.sh
-
-# Aktivierung (temporär):
-setxkbmap iast_ch        # Swiss German, PC-Tastatur
-setxkbmap iast_ch_mac    # Swiss German, Apple-Tastatur
-
-# Permanent:
-sudo localectl set-x11-keymap iast_ch
 ```
+
+**Aktivierung – permanent (X11 und Wayland):**
+```bash
+sudo localectl set-x11-keymap iast_ch      # Swiss German, PC-Tastatur
+sudo localectl set-x11-keymap iast_ch_mac  # Swiss German, Apple-Tastatur
+sudo localectl set-x11-keymap iast_de      # German, PC-Tastatur
+sudo localectl set-x11-keymap iast_de_mac  # German, Apple-Tastatur
+```
+
+**Aktivierung – temporär (nur X11):**
+```bash
+setxkbmap iast_ch
+```
+
+Oder: GNOME Einstellungen → Tastatur → Eingabequellen → **+** → „IAST"
+
+> `localectl` funktioniert auf X11 und Wayland. `setxkbmap` funktioniert nur unter X11.
 
 ### Windows
 

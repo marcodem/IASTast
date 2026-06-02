@@ -78,13 +78,18 @@ Die `<layouts>`-Sektion **muss** Hardware-Typen 0–17 (und JIS) abdecken, sonst
 ```bash
 sudo bash linux/install.sh
 
-# Aktivierung (temporär):
-setxkbmap iast_ch        # Swiss German, PC-Tastatur
-setxkbmap iast_ch_mac    # Swiss German, Apple-Tastatur (⌥ rechts = AltGr)
+# Permanent (X11 und Wayland):
+sudo localectl set-x11-keymap iast_ch      # Swiss German, PC
+sudo localectl set-x11-keymap iast_ch_mac  # Swiss German, Apple-Tastatur
 
-# Permanent:
-sudo localectl set-x11-keymap iast_ch
+# Temporär (nur X11):
+setxkbmap iast_ch
+
+# Fedora: Cache-Reload nach Installation
+sudo dnf reinstall -y xkeyboard-config
 ```
+
+`setxkbmap` funktioniert **nur unter X11**, nicht unter Wayland. `localectl` ist die universelle Lösung für beide.
 
 ## Windows – Installation
 

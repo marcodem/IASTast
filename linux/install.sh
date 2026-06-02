@@ -139,32 +139,45 @@ patch_lst
 
 # ── XKB-Cache leeren ─────────────────────────────────────────────────────────
 if command -v dpkg-reconfigure &>/dev/null; then
+    # Debian / Ubuntu
     dpkg-reconfigure xkb-data 2>/dev/null || true
+elif command -v dnf &>/dev/null; then
+    # Fedora / RHEL
+    dnf reinstall -y xkeyboard-config 2>/dev/null || true
 fi
+
+# ── Aktuelle Session-Umgebung erkennen ────────────────────────────────────────
+SESSION="${XDG_SESSION_TYPE:-unbekannt}"
 
 echo ""
 echo "Installation abgeschlossen."
 echo ""
-echo "Aktivierung:"
+echo "Aktivierung (Session: $SESSION):"
 echo ""
-echo "  PC-Tastatur (AltGr-Taste):"
-echo "    setxkbmap iast_de          # Deutsch IAST"
-echo "    setxkbmap iast_ch          # Schweizer Deutsch IAST"
+
+if [ "$SESSION" = "x11" ]; then
+echo "  X11 – sofort wirksam (temporär):"
+echo "    setxkbmap iast_ch          # Swiss German IAST, PC-Tastatur"
+echo "    setxkbmap iast_de          # German IAST, PC-Tastatur"
+echo "    setxkbmap iast_ch_mac      # Swiss German IAST, Apple-Tastatur"
+echo "    setxkbmap iast_de_mac      # German IAST, Apple-Tastatur"
 echo ""
-echo "  Apple-Tastatur (rechte ⌥-Taste als AltGr):"
-echo "    setxkbmap iast_de_mac      # Deutsch IAST"
-echo "    setxkbmap iast_ch_mac      # Schweizer Deutsch IAST"
-echo ""
-echo "  Permanent via localectl:"
-echo "    sudo localectl set-x11-keymap iast_de_mac   # Apple DE"
-echo "    sudo localectl set-x11-keymap iast_ch_mac   # Apple CH"
+fi
+
+echo "  Permanent (X11 und Wayland):"
+echo "    sudo localectl set-x11-keymap iast_ch      # Swiss German, PC"
+echo "    sudo localectl set-x11-keymap iast_de      # German, PC"
+echo "    sudo localectl set-x11-keymap iast_ch_mac  # Swiss German, Apple"
+echo "    sudo localectl set-x11-keymap iast_de_mac  # German, Apple"
 echo ""
 echo "  GNOME: Einstellungen → Tastatur → Eingabequellen → + → 'IAST'"
 echo "  KDE:   Systemeinstellungen → Eingabegeräte → Tastatur → Layouts"
 echo ""
+echo "  Hinweis: Nach 'localectl' Ab- und wieder anmelden."
+echo ""
 echo "  Apple-Tastatur: Falls Tasten (< > |) falsch belegt sind:"
-echo "    setxkbmap iast_de_mac -option apple:badmap"
+echo "    setxkbmap iast_ch_mac -option apple:badmap   # nur X11"
 echo ""
 echo "Deinstallation:"
-echo "  sudo rm /usr/share/X11/xkb/symbols/iast_de iast_ch"
+echo "  sudo rm /usr/share/X11/xkb/symbols/iast_de iast_ch iast_de_mac iast_ch_mac"
 echo "  evdev.xml.bak und evdev.lst.bak zum Wiederherstellen verwenden."
