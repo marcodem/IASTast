@@ -50,12 +50,12 @@ LAYOUT		;an explanation of the columns:
 1e	A		1	a	A	0101	0100
 1f	S		0	s	S	1e63	1e62
 20	D		0	d	D	1e0d	1e0c
-21	F		0	f	F	-1	-1
+21	F		0	f	F	1e37	1e36
 22	G		0	g	G	1e45	1e44
 23	H		0	h	H	1e25	1e24
 24	J		0	j	J	00f1	00d1
 25	K		0	k	K	-1	-1
-26	L		0	l	L	1e37	1e36
+26	L		0	l	L	-1	-1
 27	OEM_3		0	00f6	00d6	-1	-1
 28	OEM_7		0	00e4	00c4	-1	-1
 29	OEM_5		0	005e@	00b0	-1	-1

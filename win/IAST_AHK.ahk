@@ -13,7 +13,7 @@
 ;   i      ī        Ī              d      ḍ        Ḍ
 ;   u      ū        Ū              n      ṇ        Ṇ
 ;   r      ṛ        Ṛ              h      ḥ        Ḥ
-;   l      ḷ        Ḷ              m      ṃ        Ṃ
+;   f      ḷ        Ḷ              m      ṃ        Ṃ
 ;   t      ṭ        Ṭ              g      ṅ        Ṅ
 ;   x      ś        Ś              j      ñ        Ñ
 ;
@@ -72,7 +72,7 @@ RAlt & r:: {
     else
         Send "{U+1E5B}"  ; ṛ
 }
-RAlt & l:: {
+RAlt & f:: {
     if GetKeyState("Shift", "P")
         Send "{U+1E36}"  ; Ḷ
     else

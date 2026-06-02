@@ -10,7 +10,7 @@
       i → ī   Shift+Option+i → Ī
       u → ū   Shift+Option+u → Ū
       r → ṛ   Shift+Option+r → Ṛ
-      v → ḷ   Shift+Option+v → Ḷ   (l belegt durch @)
+      f → ḷ   Shift+Option+f → Ḷ   (l belegt durch @; v = √ wiederhergestellt)
       t → ṭ   Shift+Option+t → Ṭ
       d → ḍ   Shift+Option+d → Ḍ
       n → ṇ   Shift+Option+n → Ṇ
@@ -427,13 +427,13 @@
 			<key code="0" output="&#x0101;" />	<!-- a → ā  (war: å) -->
 			<key code="1" output="&#x1e63;" />	<!-- s → ṣ  (war: ‚) -->
 			<key code="2" output="&#x1e0d;" />	<!-- d → ḍ  (war: ∂) -->
-			<key code="3" output="&#x0192;" />	<!-- f → ƒ  (unverändert) -->
+			<key code="3" output="&#x1e37;" />	<!-- f → ḷ  (war: ƒ; ḷ von v hierher verlegt) -->
 			<key code="4" output="&#x1e25;" />	<!-- h → ḥ  (war: ª) -->
 			<key code="5" output="&#x1e45;" />	<!-- g → ṅ  (war: ©; @ ist auf l!) -->
 			<key code="6" output="&#x00a5;" />	<!-- y → ¥  (unverändert) -->
 			<key code="7" output="&#x015b;" />	<!-- x → ś  (war: ≈) -->
 			<key code="8" output="&#x00e7;" />	<!-- c → ç  (unverändert) -->
-			<key code="9" output="&#x1e37;" />	<!-- v → ḷ  (war: √; l belegt durch @) -->
+			<key code="9" output="&#x221a;" />	<!-- v → √  (wiederhergestellt) -->
 			<key code="10" output="&#x201e;" />	<!-- ^ → „  (unverändert, dead-key-Basis) -->
 			<key code="11" output="&#x222b;" />	<!-- b → ∫  (unverändert) -->
 			<key code="12" output="&#x00ab;" />	<!-- q → «  (unverändert) -->
@@ -539,13 +539,13 @@
 			<key code="0" output="&#x0100;" />	<!-- A → Ā  (war: Å) -->
 			<key code="1" output="&#x1e62;" />	<!-- S → Ṣ  (war: Í) -->
 			<key code="2" output="&#x1e0c;" />	<!-- D → Ḍ  (war: ™) -->
-			<key code="3" output="&#x00cf;" />
+			<key code="3" output="&#x1e36;" />	<!-- F → Ḷ  (war: Ï; Ḷ von V hierher verlegt) -->
 			<key code="4" output="&#x1e24;" />	<!-- H → Ḥ  (war: Ó) -->
 			<key code="5" output="&#x1e44;" />	<!-- G → Ṅ  (war: Ì) -->
 			<key code="6" output="&#x2021;" />
 			<key code="7" output="&#x015a;" />	<!-- X → Ś  (war: Ù) -->
 			<key code="8" output="&#x00c7;" />
-			<key code="9" output="&#x1e36;" />	<!-- V → Ḷ  (war: ◊) -->
+			<key code="9" output="&#x25ca;" />	<!-- V → ◊  (wiederhergestellt) -->
 			<key code="10" output="&#x201c;" />
 			<key code="11" output="&#x2039;" />
 			<key code="12" output="&#x00bb;" />

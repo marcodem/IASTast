@@ -54,7 +54,7 @@ IAST-Belegung (beide Varianten identisch)
   i      ī        Ī
   u      ū        Ū
   r      ṛ        Ṛ
-  l      ḷ        Ḷ
+  f      ḷ        Ḷ
   t      ṭ        Ṭ
   d      ḍ        Ḍ
   n      ṇ        Ṇ
@@ -66,6 +66,14 @@ IAST-Belegung (beide Varianten identisch)
   j      ñ        Ñ
 
   Erhalten: AltGr+q = @, AltGr+e = €, AltGr+7/8/9/0 = {[]}
+
+
+WICHTIG – IAST_DE.klc nach Änderung neu kompilieren
+----------------------------------------------------
+Die IAST_DE.klc-Datei wurde geändert (ḷ/Ḷ von AltGr+l auf AltGr+f verlegt).
+Damit die Änderung wirksam wird, muss in MSKLC ein neues DLL/Setup-Paket
+erstellt und installiert werden (siehe Option B unten).
+Das AHK-Skript ist bereits aktualisiert und sofort nutzbar.
 
 
 WICHTIG – Bekannte Einschränkungen der .klc-Dateien
