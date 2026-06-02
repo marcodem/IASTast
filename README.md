@@ -1,0 +1,81 @@
+# IASTast
+
+IAST-konforme Tastaturlayouts (International Alphabet of Sanskrit Transliteration) für macOS, Windows und Linux. IAST-Zeichen sind via **Option/AltGr-Taste** erreichbar und ergänzen bestehende Deutsche und Schweizer Layouts ohne deren wichtige Sonderbelegungen (@ , €) zu beeinträchtigen.
+
+## IAST-Belegung
+
+| Taste | ⌥ / AltGr | ⇧⌥ / Shift+AltGr | Taste | ⌥ / AltGr | ⇧⌥ / Shift+AltGr |
+|-------|-----------|------------------|-------|-----------|------------------|
+| a | ā | Ā | s | ṣ | Ṣ |
+| i | ī | Ī | d | ḍ | Ḍ |
+| u | ū | Ū | n | ṇ | Ṇ |
+| r | ṛ | Ṛ | h | ḥ | Ḥ |
+| l¹ | ḷ | Ḷ | m | ṃ | Ṃ |
+| t | ṭ | Ṭ | g² | ṅ | Ṅ |
+| x | ś | Ś | j | ñ | Ñ |
+
+¹ DE (macOS): ⌥v → ḷ, weil ⌥l = @  
+² CH: ⌥q → ṅ
+
+## Layouts
+
+| Layout | Basis | Plattform |
+|--------|-------|-----------|
+| IAST CH | Swiss German | macOS, Linux, Windows |
+| IAST DE | German | macOS, Linux, Windows |
+
+## Installation
+
+### macOS
+
+1. Entsprechendes DMG aus [Releases](https://github.com/marcodem/IASTast/releases) herunterladen
+2. DMG öffnen
+3. `IAST_CH.keylayout` (oder `IAST_DE.keylayout`) nach `~/Library/Keyboard Layouts/` kopieren  
+   *(Finder: ⌘⇧G → `~/Library/Keyboard Layouts`)*
+4. Ab- und wieder anmelden
+5. Systemeinstellungen → Tastatur → Eingabequellen → **+** → „IAST" suchen
+
+### Linux
+
+```bash
+sudo bash linux/install.sh
+
+# Aktivierung (temporär):
+setxkbmap iast_ch        # Swiss German, PC-Tastatur
+setxkbmap iast_ch_mac    # Swiss German, Apple-Tastatur
+
+# Permanent:
+sudo localectl set-x11-keymap iast_ch
+```
+
+### Windows
+
+**Option A – AutoHotkey (sofort, ohne Compilation):**  
+[AutoHotkey v2](https://www.autohotkey.com) installieren, dann `win/IAST_AHK.ahk` starten.
+
+**Option B – nativer Treiber:**  
+`win/IAST_DE.klc` oder `win/IAST_CH.klc` mit [Microsoft Keyboard Layout Creator](https://www.microsoft.com/en-us/download/details.aspx?id=102134) kompilieren und Setup ausführen.
+
+## Projektstruktur
+
+```
+mac/
+  IAST_CH.keylayout       Swiss German IAST
+  IAST_DE.keylayout       German IAST
+  build_apps.sh           Baut lokalen .app-Installer
+  src/                    Swift/AppKit Installer-Quellcode
+
+linux/
+  install.sh              Installer (benötigt sudo)
+  symbols/
+    iast_ch               XKB-Symboldatei, Basis: ch(de)
+    iast_de               XKB-Symboldatei, Basis: de(basic)
+    iast_ch_mac           Wie iast_ch + ⌥ rechts = AltGr
+    iast_de_mac           Wie iast_de + ⌥ rechts = AltGr
+
+win/
+  IAST_CH.klc             MSKLC-Quelldatei Swiss German
+  IAST_DE.klc             MSKLC-Quelldatei German
+  IAST_AHK.ahk            AutoHotkey v2 Skript
+  README.txt              Installationsanleitung Windows
+```
