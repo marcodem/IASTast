@@ -1,0 +1,42 @@
+// German IAST – für Apple-Tastaturen unter Linux
+// Basis: de(basic) + rechte ⌥-Taste als Level3-Shift (= AltGr-Äquivalent)
+//
+// Tasten wie auf macOS: rechte ⌥ = IAST, linke ⌥ = Alt (normal)
+//
+//   ⌥a → ā  ⌥i → ī  ⌥u → ū
+//   ⌥r → ṛ  ⌥l → ḷ  ⌥t → ṭ  ⌥d → ḍ
+//   ⌥n → ṇ  ⌥s → ṣ  ⌥x → ś  ⌥m → ṃ
+//   ⌥h → ḥ  ⌥g → ṅ  ⌥j → ñ
+//
+// Erhalten: ⌥q = @   ⌥e = €
+// Linke ⌥-Taste bleibt Alt (für Alt+Tab, Terminal-Shortcuts etc.)
+
+xkb_symbols "iast_de_mac" {
+
+    include "de(basic)"
+    include "level3(ralt_switch)"
+
+    name[Group1] = "German (IAST, Mac)";
+
+    // Lange Vokale
+    key <AC01> { type[Group1] = "FOUR_LEVEL_ALPHABETIC", symbols[Group1] = [ a,      A,      U0101,  U0100  ] }; // ā Ā
+    key <AD08> { type[Group1] = "FOUR_LEVEL_ALPHABETIC", symbols[Group1] = [ i,      I,      U012B,  U012A  ] }; // ī Ī
+    key <AD07> { type[Group1] = "FOUR_LEVEL_ALPHABETIC", symbols[Group1] = [ u,      U,      U016B,  U016A  ] }; // ū Ū
+
+    // Retroflex
+    key <AD05> { type[Group1] = "FOUR_LEVEL_ALPHABETIC", symbols[Group1] = [ t,      T,      U1E6D,  U1E6C  ] }; // ṭ Ṭ
+    key <AC03> { type[Group1] = "FOUR_LEVEL_ALPHABETIC", symbols[Group1] = [ d,      D,      U1E0D,  U1E0C  ] }; // ḍ Ḍ
+    key <AB06> { type[Group1] = "FOUR_LEVEL_ALPHABETIC", symbols[Group1] = [ n,      N,      U1E47,  U1E46  ] }; // ṇ Ṇ
+    key <AD04> { type[Group1] = "FOUR_LEVEL_ALPHABETIC", symbols[Group1] = [ r,      R,      U1E5B,  U1E5A  ] }; // ṛ Ṛ
+    key <AC09> { type[Group1] = "FOUR_LEVEL_ALPHABETIC", symbols[Group1] = [ l,      L,      U1E37,  U1E36  ] }; // ḷ Ḷ
+
+    // Sibilanten
+    key <AC02> { type[Group1] = "FOUR_LEVEL_ALPHABETIC", symbols[Group1] = [ s,      S,      U1E63,  U1E62  ] }; // ṣ Ṣ
+    key <AB02> { type[Group1] = "FOUR_LEVEL_ALPHABETIC", symbols[Group1] = [ x,      X,      sacute, Sacute ] }; // ś Ś
+
+    // Weitere
+    key <AB07> { type[Group1] = "FOUR_LEVEL_ALPHABETIC", symbols[Group1] = [ m,      M,      U1E43,  U1E42  ] }; // ṃ Ṃ
+    key <AC06> { type[Group1] = "FOUR_LEVEL_ALPHABETIC", symbols[Group1] = [ h,      H,      U1E25,  U1E24  ] }; // ḥ Ḥ
+    key <AC05> { type[Group1] = "FOUR_LEVEL_ALPHABETIC", symbols[Group1] = [ g,      G,      U1E45,  U1E44  ] }; // ṅ Ṅ
+    key <AC07> { type[Group1] = "FOUR_LEVEL_ALPHABETIC", symbols[Group1] = [ j,      J,      ntilde, Ntilde ] }; // ñ Ñ
+};
