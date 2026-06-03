@@ -17,7 +17,7 @@ Die geopferten Zeichen unterscheiden sich leicht zwischen CH- und DE-Layout.
 | Taste | ⌥ / AltGr | ⇧⌥ | Ersetzt (CH) | Ersetzt (DE) |
 |-------|-----------|-----|-------------|-------------|
 | a | ā | Ā | å | å |
-| i | ī | Ī | ¡ | ⁄ |
+| i | ī | Ī | ¡ | ⁄ (U+2044) |
 | u | ū | Ū | ° | ¨ (dead) |
 | r | ṛ | Ṛ | ® | ® |
 | l / f¹ | ḷ | Ḷ | ¬ | ƒ |
