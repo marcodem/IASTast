@@ -50,9 +50,8 @@ Zwei Varianten aus [Releases](https://github.com/marcodem/IASTast/releases):
 
 **Option A – .app-Installer (einfacher):**
 1. `IAST_CH_Installer.zip` oder `IAST_DE_Installer.zip` herunterladen und entpacken
-2. `IAST_CH_Installer.app` (oder `DE`) doppelklicken → installiert automatisch
-3. Ab- und wieder anmelden
-4. Systemeinstellungen → Tastatur → Eingabequellen → **+** → „IAST" suchen
+2. `IAST_CH_Installer.app` (oder `DE`) doppelklicken → zeigt Belegung und startet Installation per Klick
+3. Systemeinstellungen → Tastatur → Eingabequellen → **+** → „IAST" suchen
 
 > **Hinweis:** Die `.app`-Installer sind unsigniert. macOS blockiert sie beim Download via Browser/Mail — per AirDrop, USB oder SFTP funktionieren sie. Alternativ Option B verwenden.
 
